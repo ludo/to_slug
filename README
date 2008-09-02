@@ -17,7 +17,14 @@ See the specs for more (complex) examples.
 Installation
 ------------
 
-script/plugin install git://github.com/ludo/to_slug.git
+Using Rails plugin installer script:
+
+  script/plugin install git://github.com/ludo/to_slug.git
+
+Or as a submodule in a Git repository:
+
+  git submodule add git://github.com/ludo/to_slug.git vendor/plugins/to_slug
+
 
 Dependencies
 ------------
