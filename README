@@ -1,0 +1,28 @@
+ToSlug
+======
+
+This plugin adds a to_slug method to String instances. With this method you 
+can easily generate a slug from any string. Slugs can be used for URLs, since
+all 'dangerous' characters have been filtered out.
+
+Example
+-------
+
+  "Hello World".to_slug # => "hello-world"
+
+  "The World is Beautiful!".to_slug # => "the-world-is-beautiful"
+
+See the specs for more (complex) examples.
+
+Installation
+------------
+
+
+
+Dependencies
+------------
+
+This plugin depends on the 'unicode' gem (sudo gem install unicode). See
+http://www.yoshidam.net/Ruby.html#unicode for more information.
+
+Copyright (c) 2008 Cubicphuse, released under the MIT license
