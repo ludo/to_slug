@@ -1,5 +1,3 @@
-require 'unicode'
-
 module ToSlug
   
   # Generate a slug for the string +value+.
@@ -19,7 +17,7 @@ module ToSlug
   def to_slug
     # Perform transliteration to replace non-ascii characters with an ascii
     # character
-    value = Unicode.normalize_KD(self).gsub(/[^\x00-\x7F]/n, '')
+    value = self.chars.normalize(:kd).gsub(/[^\x00-\x7F]/n, '')
     
     # Remove single quotes from input
     value.gsub!(/[']+/, '')

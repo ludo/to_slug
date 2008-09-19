@@ -21,6 +21,10 @@ describe String, "to_slug" do
     "this s***cks! *(&%!!\r\n@^%&^*#...#!!! big time".to_slug.should == "this-s-cks-big-time"
   end
   
+  it "should allow underscores (_)" do
+    "Please leave my_underscores_intact".to_slug.should == "please-leave-my_underscores_intact"
+  end
+  
   it "should remove single quotes" do
     "what's happening".to_slug.should == "whats-happening"
   end
