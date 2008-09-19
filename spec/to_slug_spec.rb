@@ -56,4 +56,8 @@ describe String, "to_slug" do
   it "should generate a correct slug for 'aëòúi'" do
     "aëòúi".to_slug.should == "aeoui"
   end
+  
+  it "should generate a correct slug for 'Žluťoučký kůň skákal v tůňce na Öresündu'" do
+    "Žluťoučký kůň skákal v tůňce na Öresündu".to_slug.should == "zlutoucky-kun-skakal-v-tunce-na-oresundu"
+  end
 end
