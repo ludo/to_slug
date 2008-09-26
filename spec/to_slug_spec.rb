@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/spec_helper'
+require File.dirname(__FILE__) + '/spec_helper.rb'
 
 describe String, "to_slug" do
   it "should downcase all characters" do
@@ -59,5 +59,9 @@ describe String, "to_slug" do
   
   it "should generate a correct slug for 'Žluťoučký kůň skákal v tůňce na Öresündu'" do
     "Žluťoučký kůň skákal v tůňce na Öresündu".to_slug.should == "zlutoucky-kun-skakal-v-tunce-na-oresundu"
+  end
+  
+  it "should return a plain String instance" do
+    "foo".to_slug.should be_kind_of(String)
   end
 end
