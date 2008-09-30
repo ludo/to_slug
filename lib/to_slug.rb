@@ -17,7 +17,7 @@ module ToSlug
   def to_slug
     # Perform transliteration to replace non-ascii characters with an ascii
     # character
-    value = self.mb_chars.normalize(:kd).gsub(/[^\x00-\x7F]/n, '').to_s
+    value = self.chars.normalize(:kd).gsub(/[^\x00-\x7F]/n, '').to_s
     
     # Remove single quotes from input
     value.gsub!(/[']+/, '')
